@@ -54,10 +54,11 @@ Future<T?> pushNewScreenWithRouteSettings<T>(
             getPageRoute(pageTransitionAnimation,
                 enterPage: screen, settings: settings));
   } else {
-    return Navigator.of(context, rootNavigator: !withNavBar).pushReplacement<T>(
-        customPageRoute as Route<T>? ??
-            getPageRoute(pageTransitionAnimation,
-                enterPage: screen, settings: settings));
+
+    return Navigator.of(context, rootNavigator: !withNavBar)
+        .pushReplacement<T, T>(customPageRoute as Route<T>? ??
+            getPageRoute(pageTransitionAnimation, enterPage: screen, settings: settings));
+
   }
 
 }
