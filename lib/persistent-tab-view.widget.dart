@@ -600,8 +600,9 @@ class _PersistentTabViewState extends State<PersistentTabView> {
                       }
                       if ((widget.popAllScreensOnTapOfSelectedTab ?? true) &&
                           _previousIndex == index) {
-                        popAllScreens();
+                        //popAllScreens();
                       }
+                      popAllScreens();
                       _controller!.index = index;
                       widget.onItemSelected!(index);
                     }
@@ -611,8 +612,9 @@ class _PersistentTabViewState extends State<PersistentTabView> {
                       }
                       if ((widget.popAllScreensOnTapOfSelectedTab ?? true) &&
                           _previousIndex == index) {
-                        popAllScreens();
+                        //popAllScreens();
                       }
+                      popAllScreens();
                       _controller!.index = index;
                     },
             ),
